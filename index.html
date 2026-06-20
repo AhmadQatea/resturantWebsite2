@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نكهة | NAKHA — وجبات سريعة فاخرة بنكهات لا تُقاوم</title>
+    <meta name="description" content="نكهة - وجبات سريعة فاخرة بنكهات مميزة. برجر، شاورما، بيتزا، ساندويشات مميزة مع خدمة توصيل سريعة إلى باب منزلك في سوريا." />
+    <meta name="keywords" content="وجبات سريعة، برجر، شاورما، بيتزا، توصيل طعام، سوريا، دمشق، نكهات مميزة" />
+
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.0/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/amiri@5.0.0/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            dark: '#141414',
+                            gold: '#FFC107',
+                            goldLight: '#FFD54F',
+                            goldDark: '#FFA000',
+                            red: '#E53935',
+                            redDark: '#B71C1C',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0A0A0A;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#FFC107, #E53935);
+            border-radius: 10px;
+        }
+
+        .glass {
+            background: rgba(20, 20, 20, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 193, 7, 0.15);
+        }
+        .glass-strong {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 193, 7, 0.2);
+        }
+
+        .neu {
+            background: #141414;
+            box-shadow: 8px 8px 16px #000000, -8px -8px 16px #1f1f1f;
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFC107 50%, #FFA000 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+            color: #0A0A0A;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+        }
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
+        }
+        .btn-gold:hover::before {
+            left: 100%;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 193, 7, 0.5);
+        }
+
+        .btn-red {
+            background: linear-gradient(135deg, #E53935 0%, #B71C1C 100%);
+            color: #fff;
+            font-weight: 700;
+            transition: all 0.4s;
+            box-shadow: 0 10px 30px rgba(229, 57, 53, 0.3);
+        }
+        .btn-red:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(229, 57, 53, 0.5);
+        }
+
+        .btn-outline {
+            border: 2px solid #FFC107;
+            color: #FFC107;
+            transition: all 0.4s;
+        }
+        .btn-outline:hover {
+            background: #FFC107;
+            color: #0A0A0A;
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.4);
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.6) 50%, rgba(10, 10, 10, 0.95) 100%), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-gold {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(255, 193, 7, 0);
+            }
+        }
+        .pulse-gold {
+            animation: pulse-gold 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(229, 57, 53, 0);
+            }
+        }
+        .pulse-red {
+            animation: pulse-red 1.5s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+        .shine-text {
+            background: linear-gradient(90deg, #FFC107 0%, #FFD54F 25%, #fff 50%, #FFD54F 75%, #FFC107 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        .menu-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .menu-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        .menu-card:hover .menu-img {
+            transform: scale(1.15);
+        }
+        .menu-img {
+            transition: transform 0.7s ease;
+        }
+
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, #FFC107, #E53935, #FFC107);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .glow-border:hover::before {
+            opacity: 1;
+        }
+
+        .divider-gold {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .divider-gold::before,
+        .divider-gold::after {
+            content: '';
+            height: 1px;
+            width: 60px;
+            background: linear-gradient(90deg, transparent, #FFC107, transparent);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: transform 0.7s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #FFC107;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: #FFC107;
+        }
+
+        .header-scrolled {
+            background: rgba(10, 10, 10, 0.95) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+
+        .stat-card {
+            transition: all 0.4s;
+        }
+        .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: #FFC107;
+        }
+
+        .input-field {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            transition: all 0.3s;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #FFC107;
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.15);
+            background: rgba(20, 20, 20, 1);
+        }
+
+        .badge-hot {
+            background: linear-gradient(135deg, #E53935, #B71C1C);
+            animation: pulse-red 2s infinite;
+        }
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0A0A0A;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s, visibility 0.6s;
+        }
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-ring {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 193, 7, 0.1);
+            border-top-color: #FFC107;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFC107, #E53935);
+            z-index: 999;
+            transition: width 0.1s;
+        }
+
+        .feature-icon {
+            transition: all 0.4s;
+        }
+        .feature-card:hover .feature-icon {
+            transform: rotateY(360deg) scale(1.1);
+            background: linear-gradient(135deg, #FFC107, #E53935);
+            color: #0A0A0A;
+        }
+
+        .testimonial-card {
+            transition: all 0.4s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 193, 7, 0.5);
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .flavor-card {
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+        .flavor-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255, 193, 7, 0.2), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .flavor-card:hover::before {
+            opacity: 1;
+        }
+        .flavor-card:hover {
+            transform: translateY(-10px) rotate(-1deg);
+        }
+        .flavor-card:hover .flavor-emoji {
+            transform: scale(1.3) rotate(15deg);
+        }
+        .flavor-emoji {
+            transition: all 0.5s;
+        }
+
+        .step-line {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            left: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #FFC107, #E53935, #FFC107);
+            z-index: 0;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            background: #E53935;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes flame {
+            0%,
+            100% {
+                transform: scale(1) rotate(-2deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+        .flame {
+            animation: flame 1.5s ease-in-out infinite;
+        }
+
+        /* ========== تحسينات الموبايل المخصصة ========== */
+        @media (max-width: 767px) {
+            .hero-bg {
+                background-attachment: scroll;
+            }
+
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            h1 {
+                font-size: 2.2rem !important;
+                line-height: 1.3 !important;
+            }
+            h2 {
+                font-size: 1.8rem !important;
+                line-height: 1.3 !important;
+            }
+            h3 {
+                font-size: 1.3rem !important;
+            }
+
+            .glass,
+            .glass-strong {
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+            }
+
+            .menu-card .relative.h-60 {
+                height: 200px;
+            }
+
+            .gallery-item {
+                height: 160px !important;
+            }
+            .gallery-item.col-span-2 {
+                grid-column: span 2 !important;
+            }
+            .gallery-item.row-span-2 {
+                grid-row: span 2 !important;
+                height: 200px !important;
+            }
+
+            .step-line {
+                display: none;
+            }
+
+            .stat-card {
+                padding: 1.5rem 0.5rem;
+            }
+            .stat-card .text-4xl {
+                font-size: 2rem !important;
+            }
+
+            .flavor-card .text-6xl {
+                font-size: 3rem !important;
+            }
+
+            .offer-card .text-3xl {
+                font-size: 1.8rem !important;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .cart-sidebar {
+                width: 90% !important;
+                max-width: 90% !important;
+            }
+
+            .btn-gold,
+            .btn-red,
+            .btn-outline {
+                padding: 0.75rem 1.25rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            .header-logo .w-12 {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+            }
+            .header-logo .text-2xl {
+                font-size: 1.3rem !important;
+            }
+            .header-logo .text-[10px] {
+                font-size: 8px !important;
+            }
+
+            .mobile-menu {
+                width: 85% !important;
+                max-width: 85% !important;
+            }
+
+            .delivery-form-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* تحسينات إضافية للشاشات المتوسطة */
+        @media (max-width: 1023px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 639px) {
+            .menu-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* زر الرجوع للأعلى */
+        #backToTop {
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        }
+        #backToTop.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+        #backToTop.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-white">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <div class="loader-ring mx-auto mb-4"></div>
+            <div class="gold-text font-bold text-2xl font-amiri">نكهة</div>
+            <div class="text-xs text-gray-500 mt-1">NAKHA • وجبات سريعة فاخرة</div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 right-0 left-0 z-50 transition-all duration-500 py-3 md:py-4">
+        <div class="container mx-auto px-4 lg:px-8 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-2 md:gap-3 group header-logo">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-brand-gold to-brand-red flex items-center justify-center shadow-lg shadow-brand-gold/30 group-hover:rotate-12 transition-transform duration-500">
+                    <i class="fa-solid fa-burger text-brand-black text-base md:text-xl"></i>
+                </div>
+                <div>
+                    <div class="font-amiri text-xl md:text-2xl font-bold gold-text leading-none">نكهة</div>
+                    <div class="text-[8px] md:text-[10px] text-gray-400 tracking-widest">NAKHA • FAST FOOD</div>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#menu" class="nav-link">القائمة</a>
+                <a href="#flavors" class="nav-link">النكهات</a>
+                <a href="#delivery" class="nav-link">التوصيل</a>
+                <a href="#offers" class="nav-link">العروض</a>
+                <a href="#gallery" class="nav-link">المعرض</a>
+                <a href="#contact" class="nav-link">تواصل</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-3">
+                <button id="cartBtn" class="relative text-brand-gold hover:text-brand-goldLight transition p-2">
+                    <i class="fa-solid fa-bag-shopping text-xl"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+                <a href="#delivery" class="btn-red px-5 py-2.5 rounded-full text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <span>اطلب الآن</span>
+                </a>
+            </div>
+
+            <button id="menuToggle" class="lg:hidden text-brand-gold text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85%] z-[60] glass-strong shadow-2xl">
+        <div class="p-5 md:p-6">
+            <div class="flex items-center justify-between mb-6">
+                <div class="gold-text font-amiri text-xl font-bold">القائمة</div>
+                <button id="menuClose" class="text-brand-gold text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="flex flex-col gap-3">
+                <a href="#home" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">الرئيسية</a>
+                <a href="#menu" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">القائمة</a>
+                <a href="#flavors" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">النكهات المميزة</a>
+                <a href="#delivery" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">التوصيل</a>
+                <a href="#offers" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">العروض</a>
+                <a href="#gallery" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">المعرض</a>
+                <a href="#contact" class="mobile-link py-3 px-4 rounded-lg hover:bg-brand-gold/10 transition border-r-2 border-transparent hover:border-brand-gold">تواصل</a>
+            </nav>
+            <a href="#delivery" class="btn-red w-full mt-6 py-3 rounded-full block text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-motorcycle"></i>
+                <span>اطلب توصيل الآن</span>
+            </a>
+            <div class="mt-6 flex items-center justify-center gap-4 text-brand-gold">
+                <a href="#"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok text-xl"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg relative min-h-screen flex items-center pt-20 md:pt-24 pb-12 md:pb-16 overflow-hidden">
+        <div class="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-brand-gold/10 rounded-full blur-3xl float"></div>
+        <div class="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-brand-red/10 rounded-full blur-3xl float" style="animation-delay: 2s"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 glass px-3 md:px-4 py-1.5 md:py-2 rounded-full mb-4 md:mb-6">
+                        <span class="w-2 h-2 bg-brand-red rounded-full animate-pulse"></span>
+                        <span class="text-[10px] md:text-xs text-brand-gold tracking-wider">التوصيل خلال 30 دقيقة 🏍️</span>
+                    </div>
+
+                    <h1 class="font-amiri text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
+                        وجبات سريعة
+                        <br />
+                        <span class="shine-text">بنكهات استثنائية</span>
+                        <br />
+                        <span class="text-brand-gold">تصلك ساخنة</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-xl">
+                        في <span class="text-brand-gold font-bold">نكهة</span>، نقدم لك أشهى الوجبات السريعة بلمسة فاخرة. برجر واغيو، شاورما ملكية، بيتزا بالنكهات الأربع، وساندويشات لا تُقاوم. اطلب الآن ونوصلها إلى باب منزلك!
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10">
+                        <a href="#delivery" class="btn-red px-6 md:px-8 py-3 md:py-4 rounded-full flex items-center gap-2 text-sm md:text-base">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>اطلب توصيل</span>
+                        </a>
+                        <a href="#menu" class="btn-outline px-6 md:px-8 py-3 md:py-4 rounded-full flex items-center gap-2 text-sm md:text-base">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>استكشف القائمة</span>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 md:gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="flex -space-x-2 space-x-reverse">
+                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-brand-gold to-brand-goldDark border-2 border-brand-black flex items-center justify-center text-xs">🍔</div>
+                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-brand-red to-brand-redDark border-2 border-brand-black flex items-center justify-center text-xs">🍕</div>
+                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-brand-goldLight to-brand-gold border-2 border-brand-black flex items-center justify-center text-xs">🌯</div>
+                            </div>
+                            <div>
+                                <div class="text-brand-gold font-bold text-sm md:text-base">4.9/5</div>
+                                <div class="text-[10px] md:text-xs text-gray-400">+5000 تقييم</div>
+                            </div>
+                        </div>
+                        <div class="h-10 md:h-12 w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-brand-gold font-bold text-lg md:text-xl flex items-center gap-1">
+                                <i class="fa-solid fa-clock text-sm"></i> 30
+                            </div>
+                            <div class="text-[10px] md:text-xs text-gray-400">دقيقة توصيل</div>
+                        </div>
+                        <div class="h-10 md:h-12 w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-brand-gold font-bold text-lg md:text-xl flex items-center gap-1">
+                                <i class="fa-solid fa-fire flame text-sm text-brand-red"></i> ساخن
+                            </div>
+                            <div class="text-[10px] md:text-xs text-gray-400">دائماً طازج</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-right" data-aos-duration="1000" class="relative">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-br from-brand-gold/30 to-brand-red/30 rounded-[2rem] blur-2xl"></div>
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="برجر فاخر" class="relative rounded-[2rem] shadow-2xl w-full h-[280px] sm:h-[400px] md:h-[500px] object-cover border border-brand-gold/20" />
+
+                        <div class="absolute -top-3 -right-3 md:-top-6 md:-right-6 glass rounded-xl md:rounded-2xl p-3 md:p-4 float shadow-xl">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-brand-gold/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-motorcycle text-brand-gold text-sm md:text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-xs md:text-sm">توصيل سريع</div>
+                                    <div class="text-[10px] md:text-xs text-gray-400">خلال 30 دقيقة</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 glass rounded-xl md:rounded-2xl p-3 md:p-4 float shadow-xl" style="animation-delay: 1s">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-brand-red/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-fire text-brand-red text-sm md:text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-xs md:text-sm">الأكثر طلباً</div>
+                                    <div class="text-[10px] md:text-xs text-gray-400">برجر نكهة المميز</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-1/2 -left-6 md:-left-10 glass rounded-full px-3 md:px-4 py-1.5 md:py-2 float" style="animation-delay: 2s">
+                            <div class="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
+                                <i class="fa-solid fa-star text-brand-gold"></i>
+                                <span class="font-bold">جودة عالمية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#features" class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 text-brand-gold animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl md:text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">لماذا نكهة</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    ما يميز <span class="gold-text">نكهة</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">وجبات سريعة فاخرة بنكهات لا تجدها في أي مكان آخر</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="feature-card glass rounded-2xl p-4 md:p-6 text-center glow-border" data-aos="fade-up">
+                    <div class="feature-icon w-14 h-14 md:w-20 md:h-20 mx-auto rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-3 md:mb-4 text-2xl md:text-3xl">
+                        <i class="fa-solid fa-burger"></i>
+                    </div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2">وجبات طازجة</h3>
+                    <p class="text-gray-400 text-xs md:text-sm">نحضر كل طلب طازجاً أمامك بأجود المكونات</p>
+                </div>
+
+                <div class="feature-card glass rounded-2xl p-4 md:p-6 text-center glow-border" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon w-14 h-14 md:w-20 md:h-20 mx-auto rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-3 md:mb-4 text-2xl md:text-3xl">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                    </div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2">نكهات سرية</h3>
+                    <p class="text-gray-400 text-xs md:text-sm">صوصات ونكهات حصرية من تطوير طهاتنا</p>
+                </div>
+
+                <div class="feature-card glass rounded-2xl p-4 md:p-6 text-center glow-border" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon w-14 h-14 md:w-20 md:h-20 mx-auto rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-3 md:mb-4 text-2xl md:text-3xl">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2">توصيل سريع</h3>
+                    <p class="text-gray-400 text-xs md:text-sm">نوصل طلبك خلال 30 دقيقة ساخناً وطازجاً</p>
+                </div>
+
+                <div class="feature-card glass rounded-2xl p-4 md:p-6 text-center glow-border" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon w-14 h-14 md:w-20 md:h-20 mx-auto rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-3 md:mb-4 text-2xl md:text-3xl">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2">أسعار منافسة</h3>
+                    <p class="text-gray-400 text-xs md:text-sm">جودة فاخرة بأسعار تناسب الجميع</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Flavors Section -->
+    <section id="flavors" class="py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-brand-red/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">نكهاتنا المميزة</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    نكهات <span class="gold-text">لا تُقاوم</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">اكتشف مجموعتنا الفريدة من الصوصات والنكهات السرية التي تميز نكهة عن غيره</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="flavor-card glass rounded-2xl p-5 md:p-6 text-center glow-border" data-aos="zoom-in">
+                    <div class="flavor-emoji text-5xl md:text-6xl mb-3 md:mb-4 inline-block">🔥</div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2 gold-text">صوص نكهة السري</h3>
+                    <p class="text-gray-400 text-xs md:text-sm mb-2 md:mb-3">خلطة سرية من 12 بهاراً شرقياً مع لمسة حارة مميزة</p>
+                    <div class="flex items-center justify-center gap-1 text-xs">
+                        <span class="text-brand-red">🌶️🌶️🌶️</span>
+                        <span class="text-gray-500">حار</span>
+                    </div>
+                </div>
+
+                <div class="flavor-card glass rounded-2xl p-5 md:p-6 text-center glow-border" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flavor-emoji text-5xl md:text-6xl mb-3 md:mb-4 inline-block">🧀</div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2 gold-text">صوص الجبنة الذهبي</h3>
+                    <p class="text-gray-400 text-xs md:text-sm mb-2 md:mb-3">مزيج فاخر من الشيدر والجودة الذائبة بنعومة حريرية</p>
+                    <div class="flex items-center justify-center gap-1 text-xs">
+                        <span class="text-brand-gold">⭐⭐⭐⭐⭐</span>
+                        <span class="text-gray-500">كلاسيكي</span>
+                    </div>
+                </div>
+
+                <div class="flavor-card glass rounded-2xl p-5 md:p-6 text-center glow-border" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flavor-emoji text-5xl md:text-6xl mb-3 md:mb-4 inline-block">🍯</div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2 gold-text">صوص الباربيكيو المدخن</h3>
+                    <p class="text-gray-400 text-xs md:text-sm mb-2 md:mb-3">باربيكيو غني بنكهة الخشب المدخن والعسل الطبيعي</p>
+                    <div class="flex items-center justify-center gap-1 text-xs">
+                        <span class="text-brand-red">🌶️🌶️</span>
+                        <span class="text-gray-500">متوسط</span>
+                    </div>
+                </div>
+
+                <div class="flavor-card glass rounded-2xl p-5 md:p-6 text-center glow-border" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flavor-emoji text-5xl md:text-6xl mb-3 md:mb-4 inline-block">🌿</div>
+                    <h3 class="font-bold text-base md:text-lg mb-1 md:mb-2 gold-text">صوص الترافل الفاخر</h3>
+                    <p class="text-gray-400 text-xs md:text-sm mb-2 md:mb-3">لمسة فاخرة من الترافل الأسود مع زيت الزيتون البكر</p>
+                    <div class="flex items-center justify-center gap-1 text-xs">
+                        <span class="text-brand-gold">💎 VIP</span>
+                        <span class="text-gray-500">فاخر</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 md:mt-12 glass rounded-3xl p-6 md:p-10 text-center glow-border" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+                    <div class="text-5xl md:text-6xl">👨‍🍳</div>
+                    <div class="text-center md:text-right flex-1">
+                        <h3 class="font-amiri text-xl md:text-2xl font-bold mb-2">وصفات حصرية من <span class="gold-text">شيف نكهة</span></h3>
+                        <p class="text-gray-400 text-sm md:text-base">كل نكهة هي نتيجة سنوات من التجارب والإتقان. طهاتنا يبتكرون لك تجربة طعم لا تتكرر في أي مكان آخر.</p>
+                    </div>
+                    <a href="#menu" class="btn-gold px-5 md:px-6 py-2.5 md:py-3 rounded-full whitespace-nowrap text-sm md:text-base">جربها الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">قائمة الطعام</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    وجباتنا <span class="gold-text">السريعة المميزة</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">اختر من تشكيلتنا الواسجة من الوجبات السريعة الفاخرة</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12" data-aos="fade-up">
+                <button class="menu-tab active px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition" data-category="all">الكل</button>
+                <button class="menu-tab px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition" data-category="burger">🍔 برجر</button>
+                <button class="menu-tab px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition" data-category="shawarma">🌯 شاورما</button>
+                <button class="menu-tab px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition" data-category="pizza">🍕 بيتزا</button>
+                <button class="menu-tab px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition" data-category="sandwich">🥪 ساندويشات</button>
+                <button class="menu-tab px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition" data-category="sides">🍟 إضافات</button>
+            </div>
+
+            <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- برجر نكهة المميز -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="burger">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="برجر نكهة" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 badge-hot text-white text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">🔥 الأكثر طلباً</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            45,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">برجر نكهة المميز</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">لحم واغيو 200 غرام، جبنة شيدر ذائبة، صوص نكهة السري، خس طازج</p>
+                        <button onclick="addToCart('برجر نكهة المميز', 45000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- برجر نكهة المزدوج -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="burger">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600" alt="برجر مزدوج" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">جديد ✨</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            65,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">برجر نكهة المزدوج</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">طبقتان من لحم واغيو، جبنة مزدوجة، بصل مكرمل، صوص باربيكيو مدخن</p>
+                        <button onclick="addToCart('برجر نكهة المزدوج', 65000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- شاورما نكهة الملكية -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="shawarma">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600" alt="شاورما" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">ملكي 👑</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            35,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">شاورما نكهة الملكية</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">شاورما لحم متبلة بالبهارات الشرقية، مع صوص الثوم والمخللات المنزلية</p>
+                        <button onclick="addToCart('شاورما نكهة الملكية', 35000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- شاورما دجاج مميزة -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="shawarma">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600" alt="شاورما دجاج" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            30,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">شاورما دجاج مميزة</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">شاورما دجاج طازجة مع صوص الطحينة الخاص والخضار المشوية</p>
+                        <button onclick="addToCart('شاورما دجاج مميزة', 30000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- بيتزا النكهات الأربع -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="pizza">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="بيتزا" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 badge-hot text-white text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">🔥 مميز</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            55,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">بيتزا النكهات الأربع</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">بيتزا فاخرة بـ 4 نكهات: بيبروني، مشروم، زيتون، وجبنة موزاريلا</p>
+                        <button onclick="addToCart('بيتزا النكهات الأربع', 55000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- بيتزا بيبروني كلاسيك -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="pizza">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="بيتزا بيبروني" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            50,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">بيتزا بيبروني كلاسيك</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">بيتزا بالبيبروني الحار مع جبنة موزاريلا ذائبة وصوص الطماطم الطازجة</p>
+                        <button onclick="addToCart('بيتزا بيبروني كلاسيك', 50000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ساندويش تشيكن كرسبي -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="sandwich">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600" alt="تشيكن كرسبي" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">كرسبي 🍗</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            35,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">ساندويش تشيكن كرسبي</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">دجاج مقرمش مع خس، طماطم، وصوص الجبنة الذهبي الخاص</p>
+                        <button onclick="addToCart('ساندويش تشيكن كرسبي', 35000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- نادي نكهة ساندويش -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="sandwich">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=600" alt="كلوب ساندويش" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            40,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">نادي نكهة ساندويش</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">ساندويش ثلاثي بطبقات من الدجاج المشوي، البيكون، والخضار الطازجة</p>
+                        <button onclick="addToCart('نادي نكهة ساندويش', 40000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- بطاطس نكهة بالترافل -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="sides">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600" alt="بطاطس" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">💎 VIP</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            20,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">بطاطس نكهة بالترافل</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">بطاطس مقلية مقرشة مع زيت الترافل وجبنة بارميزان وبقدونس</p>
+                        <button onclick="addToCart('بطاطس نكهة بالترافل', 20000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ناجتس الدجاج الذهبية -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="sides">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=600" alt="ناجتس" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            25,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">ناجتس الدجاج الذهبية</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">10 قطع ناجتس مقرشة مع صوص الجبنة الذهبي وصوص الباربيكيو</p>
+                        <button onclick="addToCart('ناجتس الدجاج الذهبية', 25000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- حلقات البصل المقرمشة -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="sides">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600" alt="حلقات بصل" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            15,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">حلقات البصل المقرمشة</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">حلقات بصل ذهبية مقرشة مع صوص نكهة السري للتغميس</p>
+                        <button onclick="addToCart('حلقات البصل المقرمشة', 15000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- راب الدجاج المشوي -->
+                <div class="menu-item menu-card glass rounded-2xl overflow-hidden glow-border" data-category="sandwich">
+                    <div class="relative h-48 md:h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600" alt="راب" class="menu-img w-full h-full object-cover" />
+                        <div class="absolute top-3 right-3 bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full">صحي 🥗</div>
+                        <div class="absolute bottom-3 left-3 bg-brand-black/80 backdrop-blur px-2 md:px-3 py-1 rounded-full text-brand-gold font-bold text-xs md:text-sm">
+                            32,000 ل.س
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <div class="flex items-start justify-between mb-1 md:mb-2">
+                            <h3 class="font-bold text-lg md:text-xl">راب الدجاج المشوي</h3>
+                            <div class="flex text-brand-gold text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">خبز تورتيلا طري مع دجاج مشوي، خضار طازجة، وصوص الرانش</p>
+                        <button onclick="addToCart('راب الدجاج المشوي', 32000)" class="w-full btn-red py-2 md:py-2.5 rounded-full text-xs md:text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> أضف للطلب
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 20% 50%, #FFC107 0%, transparent 50%), radial-gradient(circle at 80% 50%, #E53935 0%, transparent 50%);"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">خدمة التوصيل</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    اطلب الآن <span class="gold-text">ونوصلك</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">اطلب وجبتك المفضلة واستلمها ساخنة على باب منزلك خلال 30 دقيقة</p>
+            </div>
+
+            <!-- Delivery Steps -->
+            <div class="relative mb-12 md:mb-16" data-aos="fade-up">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 relative">
+                    <div class="hidden md:block step-line"></div>
+
+                    <div class="relative text-center">
+                        <div class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-brand-gold to-brand-goldDark flex items-center justify-center text-brand-black text-xl md:text-2xl mb-2 md:mb-4 relative z-10 shadow-lg shadow-brand-gold/30">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <div class="text-brand-gold text-[10px] md:text-xs font-bold mb-1">الخطوة 1</div>
+                        <h3 class="font-bold text-sm md:text-lg mb-1 md:mb-2">اختر وجبتك</h3>
+                        <p class="text-gray-400 text-[10px] md:text-sm">تصفح القائمة واختر وجباتك المفضلة</p>
+                    </div>
+
+                    <div class="relative text-center">
+                        <div class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-brand-red to-brand-redDark flex items-center justify-center text-white text-xl md:text-2xl mb-2 md:mb-4 relative z-10 shadow-lg shadow-brand-red/30">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <div class="text-brand-gold text-[10px] md:text-xs font-bold mb-1">الخطوة 2</div>
+                        <h3 class="font-bold text-sm md:text-lg mb-1 md:mb-2">أكد طلبك</h3>
+                        <p class="text-gray-400 text-[10px] md:text-sm">أدخل عنوانك واختر طريقة الدفع</p>
+                    </div>
+
+                    <div class="relative text-center">
+                        <div class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-brand-gold to-brand-goldDark flex items-center justify-center text-brand-black text-xl md:text-2xl mb-2 md:mb-4 relative z-10 shadow-lg shadow-brand-gold/30">
+                            <i class="fa-solid fa-fire-burner"></i>
+                        </div>
+                        <div class="text-brand-gold text-[10px] md:text-xs font-bold mb-1">الخطوة 3</div>
+                        <h3 class="font-bold text-sm md:text-lg mb-1 md:mb-2">نحضر طلبك</h3>
+                        <p class="text-gray-400 text-[10px] md:text-sm">طهاتنا يحضرون وجبتك طازجة وساخنة</p>
+                    </div>
+
+                    <div class="relative text-center">
+                        <div class="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-brand-red to-brand-redDark flex items-center justify-center text-white text-xl md:text-2xl mb-2 md:mb-4 relative z-10 shadow-lg shadow-brand-red/30 pulse-red">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                        <div class="text-brand-gold text-[10px] md:text-xs font-bold mb-1">الخطوة 4</div>
+                        <h3 class="font-bold text-sm md:text-lg mb-1 md:mb-2">نوصلك بسرعة</h3>
+                        <p class="text-gray-400 text-[10px] md:text-sm">خلال 30 دقيقة على باب منزلك</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery Form -->
+            <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
+                <div class="glass rounded-3xl p-5 md:p-10" data-aos="fade-left">
+                    <h3 class="font-amiri text-xl md:text-2xl font-bold mb-5 md:mb-6 gold-text flex items-center gap-2">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        نموذج طلب التوصيل
+                    </h3>
+                    <form id="deliveryForm" class="space-y-4 md:space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                            <div>
+                                <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">الاسم الكامل *</label>
+                                <input type="text" required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="أدخل اسمك" />
+                            </div>
+                            <div>
+                                <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">رقم الهاتف *</label>
+                                <input type="tel" required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="+963 9XX XXX XXX" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">العنوان بالتفصيل *</label>
+                            <input type="text" required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="المنطقة، الشارع، رقم البناء، الطابق" />
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                            <div>
+                                <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">المنطقة *</label>
+                                <select required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base">
+                                    <option class="bg-brand-dark" value="">اختر المنطقة</option>
+                                    <option class="bg-brand-dark">المزة</option>
+                                    <option class="bg-brand-dark">كفرسوسة</option>
+                                    <option class="bg-brand-dark">المالكي</option>
+                                    <option class="bg-brand-dark">أبو رمانة</option>
+                                    <option class="bg-brand-dark">القصاع</option>
+                                    <option class="bg-brand-dark">الميدان</option>
+                                    <option class="bg-brand-dark">جرمانا</option>
+                                    <option class="bg-brand-dark">البرامكة</option>
+                                    <option class="bg-brand-dark">الربوة</option>
+                                    <option class="bg-brand-dark">مناطق أخرى</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">طريقة الدفع *</label>
+                                <select required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base">
+                                    <option class="bg-brand-dark">عند الاستلام (كاش)</option>
+                                    <option class="bg-brand-dark">بطاقة ائتمان</option>
+                                    <option class="bg-brand-dark">محفظة إلكترونية</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">ملاحظات للطلب</label>
+                            <textarea rows="3" class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="أي ملاحظات خاصة (بدون بصل، إضافي صوص...)"></textarea>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="bg-brand-black/50 rounded-2xl p-4 md:p-5 border border-brand-gold/20">
+                            <div class="flex items-center justify-between mb-2 md:mb-3">
+                                <h4 class="font-bold text-brand-gold text-sm md:text-base">ملخص الطلب</h4>
+                                <span id="itemsCount" class="text-[10px] md:text-xs text-gray-400">0 عنصر</span>
+                            </div>
+                            <div id="orderItems" class="space-y-1 md:space-y-2 mb-2 md:mb-3 max-h-40 overflow-y-auto text-sm md:text-base">
+                                <div class="text-center text-gray-500 text-xs md:text-sm py-3 md:py-4">
+                                    <i class="fa-solid fa-cart-shopping text-xl md:text-2xl mb-1 md:mb-2"></i>
+                                    <div>لم تضف أي عنصر بعد</div>
+                                </div>
+                            </div>
+                            <div class="border-t border-white/10 pt-2 md:pt-3 space-y-1 md:space-y-2">
+                                <div class="flex justify-between text-xs md:text-sm">
+                                    <span class="text-gray-400">المجموع الفرعي</span>
+                                    <span id="subtotal" class="font-bold">0 ل.س</span>
+                                </div>
+                                <div class="flex justify-between text-xs md:text-sm">
+                                    <span class="text-gray-400">رسوم التوصيل</span>
+                                    <span class="font-bold text-brand-gold">5,000 ل.س</span>
+                                </div>
+                                <div class="flex justify-between text-base md:text-lg pt-1 md:pt-2 border-t border-white/10">
+                                    <span class="font-bold">الإجمالي</span>
+                                    <span id="total" class="font-bold gold-text">5,000 ل.س</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-red w-full py-3 md:py-4 rounded-full flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>إرسال الطلب الآن</span>
+                        </button>
+                    </form>
+                    <div id="deliverySuccess" class="hidden mt-3 md:mt-4 p-3 md:p-4 rounded-xl bg-green-500/20 border border-green-500/50 text-green-400 text-center text-sm md:text-base">
+                        <i class="fa-solid fa-check-circle text-xl md:text-2xl mb-1 md:mb-2"></i>
+                        <div class="font-bold">تم استلام طلبك بنجاح! 🎉</div>
+                        <div class="text-xs md:text-sm mt-1">سيتم التواصل معك خلال دقائق لتأكيد الطلب</div>
+                    </div>
+                </div>
+
+                <!-- Delivery Info -->
+                <div class="space-y-5 md:space-y-6" data-aos="fade-right">
+                    <div class="glass rounded-3xl p-5 md:p-8">
+                        <h3 class="font-amiri text-xl md:text-2xl font-bold mb-4 md:mb-6 gold-text flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info"></i>
+                            معلومات التوصيل
+                        </h3>
+                        <div class="space-y-4 md:space-y-5">
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-clock text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">وقت التوصيل</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">30 - 45 دقيقة من وقت الطلب</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-money-bill-wave text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">رسوم التوصيل</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">5,000 ل.س داخل دمشق</div>
+                                    <div class="text-[10px] md:text-xs text-brand-gold mt-0.5 md:mt-1">✨ مجاناً للطلبات فوق 100,000 ل.س</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-map-location-dot text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">مناطق التوصيل</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">جميع أحياء دمشق وضواحيها</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-credit-card text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">طرق الدفع</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">كاش عند الاستلام، بطاقة، محفظة إلكترونية</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-red/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-crosshairs text-brand-red text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">تتبع الطلب</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">تابع طلبك لحظة بلحظة عبر الواتساب</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Order via WhatsApp -->
+                    <div class="glass rounded-3xl p-5 md:p-8 bg-gradient-to-br from-green-500/10 to-transparent border-green-500/30">
+                        <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-500 flex items-center justify-center text-white text-xl md:text-2xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base md:text-lg">اطلب عبر الواتساب</h4>
+                                <p class="text-gray-400 text-xs md:text-sm">طريقة أسرع وأسهل للطلب</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/963999000000" class="btn-gold w-full py-2.5 md:py-3 rounded-full flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>تواصل معنا الآن</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="py-12 md:py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">عروض حصرية</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    عروض <span class="gold-text">لا تُفوَّت</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">استفد من عروضنا المحدودة على الوجبات السريعة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="relative rounded-3xl overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-gold/90 to-brand-goldDark/90"></div>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="عرض" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-110 transition-transform duration-700" />
+                    <div class="relative p-6 md:p-8 text-brand-black min-h-[280px] md:min-h-[400px] flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block bg-brand-black text-brand-gold text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full mb-3 md:mb-4">خصم 30%</div>
+                            <h3 class="font-amiri text-2xl md:text-3xl font-bold mb-2">وجبة العائلة</h3>
+                            <p class="text-brand-black/80 text-sm md:text-base mb-4 md:mb-6">4 برجر + 4 بطاطس + 4 مشروبات + ناجتس كبير مجاناً</p>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <div class="text-xs md:text-sm line-through opacity-60">250,000 ل.س</div>
+                                <div class="text-2xl md:text-3xl font-bold">175,000 ل.س</div>
+                            </div>
+                            <a href="#delivery" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-black text-brand-gold flex items-center justify-center hover:rotate-45 transition-transform">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-red to-brand-redDark"></div>
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="عرض" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-110 transition-transform duration-700" />
+                    <div class="relative p-6 md:p-8 text-white min-h-[280px] md:min-h-[400px] flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block bg-white text-brand-red text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full mb-3 md:mb-4 animate-pulse">🔥 عرض اليوم</div>
+                            <h3 class="font-amiri text-2xl md:text-3xl font-bold mb-2">وجبة الأصدقاء</h3>
+                            <p class="text-white/90 text-sm md:text-base mb-4 md:mb-6">2 برجر مزدوج + بيتزا كبيرة + بطاطس + 4 مشروبات</p>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <div class="text-xs md:text-sm line-through opacity-60">200,000 ل.س</div>
+                                <div class="text-2xl md:text-3xl font-bold">139,000 ل.س</div>
+                            </div>
+                            <a href="#delivery" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white text-brand-red flex items-center justify-center hover:rotate-45 transition-transform">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-black to-brand-dark border border-brand-gold/30"></div>
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="عرض" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-110 transition-transform duration-700" />
+                    <div class="relative p-6 md:p-8 min-h-[280px] md:min-h-[400px] flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full mb-3 md:mb-4">🚚 توصيل مجاني</div>
+                            <h3 class="font-amiri text-2xl md:text-3xl font-bold gold-text mb-2">عرض منتصف الأسبوع</h3>
+                            <p class="text-gray-300 text-sm md:text-base mb-4 md:mb-6">توصيل مجاني على جميع الطلبات يوم الثلاثاء والأربعاء</p>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <div class="text-xs md:text-sm text-gray-400">وفر</div>
+                                <div class="text-2xl md:text-3xl font-bold gold-text">5,000 ل.س</div>
+                            </div>
+                            <a href="#delivery" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold text-brand-black flex items-center justify-center hover:rotate-45 transition-transform">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 md:py-20 relative" style="background-image: linear-gradient(rgba(10,10,10,0.92), rgba(10,10,10,0.92)), url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1920'); background-size: cover; background-attachment: fixed;">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="stat-card glass rounded-2xl p-4 md:p-8 text-center border border-transparent" data-aos="zoom-in">
+                    <div class="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-full bg-brand-gold/10 flex items-center justify-center mb-2 md:mb-4">
+                        <i class="fa-solid fa-users text-brand-gold text-lg md:text-2xl"></i>
+                    </div>
+                    <div class="text-2xl md:text-5xl font-bold gold-text mb-1 md:mb-2 counter" data-target="50000">0</div>
+                    <div class="text-gray-400 text-[10px] md:text-sm">عميل سعيد</div>
+                </div>
+
+                <div class="stat-card glass rounded-2xl p-4 md:p-8 text-center border border-transparent" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-full bg-brand-gold/10 flex items-center justify-center mb-2 md:mb-4">
+                        <i class="fa-solid fa-burger text-brand-gold text-lg md:text-2xl"></i>
+                    </div>
+                    <div class="text-2xl md:text-5xl font-bold gold-text mb-1 md:mb-2 counter" data-target="250000">0</div>
+                    <div class="text-gray-400 text-[10px] md:text-sm">وجبة تم توصيلها</div>
+                </div>
+
+                <div class="stat-card glass rounded-2xl p-4 md:p-8 text-center border border-transparent" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-full bg-brand-gold/10 flex items-center justify-center mb-2 md:mb-4">
+                        <i class="fa-solid fa-motorcycle text-brand-gold text-lg md:text-2xl"></i>
+                    </div>
+                    <div class="text-2xl md:text-5xl font-bold gold-text mb-1 md:mb-2 counter" data-target="30">0</div>
+                    <div class="text-gray-400 text-[10px] md:text-sm">دقيقة متوسط التوصيل</div>
+                </div>
+
+                <div class="stat-card glass rounded-2xl p-4 md:p-8 text-center border border-transparent" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-full bg-brand-gold/10 flex items-center justify-center mb-2 md:mb-4">
+                        <i class="fa-solid fa-star text-brand-gold text-lg md:text-2xl"></i>
+                    </div>
+                    <div class="text-2xl md:text-5xl font-bold gold-text mb-1 md:mb-2 counter" data-target="49">0</div>
+                    <div class="text-gray-400 text-[10px] md:text-sm">تقييم 4.9/5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">آراء عملائنا</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    ماذا يقول <span class="gold-text">عملاؤنا</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">تجارب حقيقية من عملائنا الكرام</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="testimonial-card glass rounded-2xl p-5 md:p-8 border border-transparent" data-aos="fade-up">
+                    <div class="flex text-brand-gold mb-3 md:mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6">"أفضل برجر تذوقته في حياتي! الصوص السري شيء خرافي والتوصيل كان سريع جداً. أنصح الجميع بتجربة برجر نكهة المميز 🔥"</p>
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-brand-gold to-brand-goldDark flex items-center justify-center font-bold text-brand-black text-lg md:text-xl">أ</div>
+                        <div>
+                            <div class="font-bold text-sm md:text-base">أحمد الخطيب</div>
+                            <div class="text-[10px] md:text-xs text-gray-400">دمشق - المزة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass rounded-2xl p-5 md:p-8 border border-transparent" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-brand-gold mb-3 md:mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6">"شاورما نكهة الملكية أصبحت وجبتي المفضلة! النكهة مميزة جداً والكمية ممتازة. شكراً لكم على الجودة العالية."</p>
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-brand-red to-brand-redDark flex items-center justify-center font-bold text-white text-lg md:text-xl">ل</div>
+                        <div>
+                            <div class="font-bold text-sm md:text-base">ليلى الحسن</div>
+                            <div class="text-[10px] md:text-xs text-gray-400">دمشق - كفرسوسة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass rounded-2xl p-5 md:p-8 border border-transparent" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-brand-gold mb-3 md:mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6">"طلبت وجبة العائلة في عيد ميلاد ابني وكانت رائعة! كل شيء وصل ساخن وطازج. البطاطس بالترافل تحفة فنية 👌"</p>
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-brand-gold to-brand-goldDark flex items-center justify-center font-bold text-brand-black text-lg md:text-xl">م</div>
+                        <div>
+                            <div class="font-bold text-sm md:text-base">محمد السيد</div>
+                            <div class="text-[10px] md:text-xs text-gray-400">دمشق - المالكي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">معرض الصور</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    لحظات من <span class="gold-text">نكهة</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">اكتشف أشهى وجباتنا من خلال معرض الصور</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                <div class="gallery-item h-40 md:h-64 col-span-2 row-span-2" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="معرض" />
+                    <div class="gallery-overlay">
+                        <div>
+                            <div class="text-brand-gold text-[10px] md:text-xs tracking-widest mb-0.5 md:mb-1">المميز</div>
+                            <div class="font-bold text-sm md:text-base">برجر نكهة</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item h-40 md:h-64" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">بيتزا النكهات</div></div>
+                </div>
+                <div class="gallery-item h-40 md:h-64" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">شاورما ملكية</div></div>
+                </div>
+                <div class="gallery-item h-40 md:h-64" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">تشيكن كرسبي</div></div>
+                </div>
+                <div class="gallery-item h-40 md:h-64" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">بطاطس بالترافل</div></div>
+                </div>
+                <div class="gallery-item h-40 md:h-64 col-span-2" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=800" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">برجر مزدوج</div></div>
+                </div>
+                <div class="gallery-item h-40 md:h-64" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=600" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">ناجتس ذهبية</div></div>
+                </div>
+                <div class="gallery-item h-40 md:h-64" data-aos="zoom-in" data-aos-delay="700">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="معرض" />
+                    <div class="gallery-overlay"><div class="font-bold text-xs md:text-sm">بيتزا بيبروني</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-gold via-brand-goldDark to-brand-red"></div>
+        <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600'); background-size: cover; background-position: center;"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative text-center" data-aos="zoom-in">
+            <div class="text-5xl md:text-6xl mb-3 md:mb-4">🍔🍕🌯</div>
+            <h2 class="font-amiri text-3xl md:text-6xl font-bold text-brand-black mb-3 md:mb-6">
+                جوعان؟ اطلب الآن!
+            </h2>
+            <p class="text-brand-black/80 text-sm md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
+                وجباتك المفضلة على بعد نقرة واحدة. توصيل سريع خلال 30 دقيقة إلى باب منزلك
+            </p>
+            <div class="flex flex-wrap gap-3 md:gap-4 justify-center">
+                <a href="#delivery" class="bg-brand-black text-brand-gold px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-brand-dark transition inline-flex items-center gap-2 text-sm md:text-base">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <span>اطلب توصيل</span>
+                </a>
+                <a href="tel:+963999000000" class="bg-white/20 backdrop-blur text-brand-black px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-white/30 transition inline-flex items-center gap-2 border-2 border-brand-black text-sm md:text-base">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>اتصل بنا</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Restaurant Owners -->
+    <section id="about" class="py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-brand-red/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div data-aos="fade-left">
+                    <div class="divider-gold mb-3 md:mb-4 justify-start">
+                        <span class="text-brand-gold text-xs md:text-sm tracking-widest">لأصحاب المطاعم</span>
+                    </div>
+                    <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">
+                        لماذا يحتاج <span class="gold-text">مطعمك</span> إلى موقع إلكتروني؟
+                    </h2>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
+                        في عصر الرقمنة، أصبح الموقع الإلكتروني واجهتك الأولى أمام العملاء. نحن نقدم حلولاً رقمية متكاملة لأصحاب مطاعم الوجبات السريعة في سوريا لزيادة مبيعاتك وتوسيع نطاق توصيلك.
+                    </p>
+
+                    <div class="space-y-3 md:space-y-4">
+                        <div class="flex gap-3 md:gap-4 items-start glass rounded-xl p-3 md:p-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-motorcycle text-brand-gold text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1">نظام توصيل متكامل</h4>
+                                <p class="text-gray-400 text-xs md:text-sm">نظام طلبات وتوصيل احترافي يزيد مبيعاتك بنسبة 60%</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 md:gap-4 items-start glass rounded-xl p-3 md:p-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-mobile-screen text-brand-gold text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1">طلبات أونلاين 24/7</h4>
+                                <p class="text-gray-400 text-xs md:text-sm">استقبل الطلبات على مدار الساعة حتى خارج أوقات العمل</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 md:gap-4 items-start glass rounded-xl p-3 md:p-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-chart-line text-brand-gold text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1">تحليلات وتقارير</h4>
+                                <p class="text-gray-400 text-xs md:text-sm">تابع أداء مطعمك وأطباقك الأكثر مبيعة بسهولة</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 md:gap-4 items-start glass rounded-xl p-3 md:p-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-bullhorn text-brand-gold text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1">تسويق رقمي فعّال</h4>
+                                <p class="text-gray-400 text-xs md:text-sm">حسّن ظهورك في محركات البحث ووسائل التواصل الاجتماعي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-gold inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-full mt-6 md:mt-8 text-sm md:text-base">
+                        <span>احصل على موقعك الآن</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div data-aos="fade-right" class="relative">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-br from-brand-gold/20 to-brand-red/20 rounded-[2rem] blur-2xl"></div>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800" alt="موقع مطعم" class="relative rounded-[2rem] shadow-2xl w-full border border-brand-gold/20" />
+
+                        <div class="absolute -top-3 -left-3 md:-top-6 md:-left-6 glass rounded-xl md:rounded-2xl p-3 md:p-4 float">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-green-400 text-sm md:text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-green-400 font-bold text-xs md:text-base">+156%</div>
+                                    <div class="text-[10px] md:text-xs text-gray-400">زيادة الطلبات</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-3 -right-3 md:-bottom-6 md:-right-6 glass rounded-xl md:rounded-2xl p-3 md:p-4 float" style="animation-delay: 1s">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-utensils text-brand-gold text-sm md:text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-brand-gold font-bold text-xs md:text-base">+300</div>
+                                    <div class="text-[10px] md:text-xs text-gray-400">مطعم ناجح</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <div class="divider-gold mb-3 md:mb-4">
+                    <span class="text-brand-gold text-xs md:text-sm tracking-widest">تواصل معنا</span>
+                </div>
+                <h2 class="font-amiri text-3xl md:text-5xl font-bold mb-3 md:mb-4">
+                    نحن <span class="gold-text">بانتظارك</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">لأي استفسار أو ملاحظة، لا تتردد في التواصل معنا</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
+                <div class="glass rounded-3xl p-5 md:p-10" data-aos="fade-left">
+                    <h3 class="font-amiri text-xl md:text-2xl font-bold mb-4 md:mb-6 gold-text">أرسل لنا رسالة</h3>
+                    <form id="contactForm" class="space-y-4 md:space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                            <div>
+                                <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">الاسم</label>
+                                <input type="text" required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="اسمك الكامل" />
+                            </div>
+                            <div>
+                                <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">الهاتف</label>
+                                <input type="tel" required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="+963 9XX XXX XXX" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">البريد الإلكتروني</label>
+                            <input type="email" class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="example@email.com" />
+                        </div>
+                        <div>
+                            <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">الموضوع</label>
+                            <select class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base">
+                                <option class="bg-brand-dark">استفسار عام</option>
+                                <option class="bg-brand-dark">طلب توصيل</option>
+                                <option class="bg-brand-dark">شكوى</option>
+                                <option class="bg-brand-dark">اقتراح</option>
+                                <option class="bg-brand-dark">شراكة</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs md:text-sm text-gray-400 mb-1 md:mb-2">الرسالة</label>
+                            <textarea rows="4" required class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-sm md:text-base" placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold w-full py-3 md:py-4 rounded-full flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>إرسال الرسالة</span>
+                        </button>
+                    </form>
+                    <div id="contactSuccess" class="hidden mt-3 md:mt-4 p-3 md:p-4 rounded-xl bg-green-500/20 border border-green-500/50 text-green-400 text-center text-sm md:text-base">
+                        <i class="fa-solid fa-check-circle text-xl md:text-2xl mb-1 md:mb-2"></i>
+                        <div>تم إرسال رسالتك بنجاح! سنرد عليك قريباً.</div>
+                    </div>
+                </div>
+
+                <div class="space-y-5 md:space-y-6" data-aos="fade-right">
+                    <div class="glass rounded-3xl p-5 md:p-8">
+                        <h3 class="font-amiri text-xl md:text-2xl font-bold mb-4 md:mb-6 gold-text">معلومات التواصل</h3>
+                        <div class="space-y-4 md:space-y-5">
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">العنوان</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">شارع بغداد، وسط دمشق، سوريا</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-phone text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">الهاتف / واتساب</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">+963 999 000 000</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">+963 11 222 3333</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">البريد الإلكتروني</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">order@nakha.sy</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-regular fa-clock text-brand-gold text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm md:text-base mb-0.5 md:mb-1">ساعات العمل والتوصيل</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">يومياً: 11:00 صباحاً - 2:00 صباحاً</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-2 md:gap-3 mt-4 md:mt-6 pt-4 md:pt-6 border-t border-white/10">
+                            <a href="#" class="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-sm md:text-base"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-sm md:text-base"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-sm md:text-base"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" class="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-sm md:text-base"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" class="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-sm md:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-3xl overflow-hidden h-56 md:h-80">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=36.2765%2C33.4965%2C36.3165%2C33.5265&layer=mapnik&marker=33.5138%2C36.2765" class="w-full h-full border-0 grayscale contrast-125" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-brand-gold/10 pt-12 md:pt-16 pb-6 md:pb-8">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-8 md:mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4 md:mb-5">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-brand-gold to-brand-red flex items-center justify-center">
+                            <i class="fa-solid fa-burger text-brand-black text-base md:text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-amiri text-xl md:text-2xl font-bold gold-text">نكهة</div>
+                            <div class="text-[8px] md:text-[10px] text-gray-400 tracking-widest">NAKHA • FAST FOOD</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-5">وجبات سريعة فاخرة بنكهات استثنائية. نقدم لك أشهى البرجر، الشاورما، البيتزا، والساندويشات مع خدمة توصيل سريعة.</p>
+                    <div class="flex gap-2 md:gap-3">
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-xs md:text-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-xs md:text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-xs md:text-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 hover:bg-brand-gold hover:text-brand-black flex items-center justify-center transition text-xs md:text-sm"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-base md:text-lg mb-3 md:mb-5 gold-text">روابط سريعة</h4>
+                    <ul class="space-y-2 md:space-y-3 text-xs md:text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[8px] md:text-xs"></i> الرئيسية</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[8px] md:text-xs"></i> قائمة الطعام</a></li>
+                        <li><a href="#flavors" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[8px] md:text-xs"></i> النكهات المميزة</a></li>
+                        <li><a href="#delivery" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[8px] md:text-xs"></i> اطلب توصيل</a></li>
+                        <li><a href="#offers" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[8px] md:text-xs"></i> العروض</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[8px] md:text-xs"></i> المعرض</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-base md:text-lg mb-3 md:mb-5 gold-text">تواصل معنا</h4>
+                    <ul class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-400">
+                        <li class="flex items-start gap-2 md:gap-3"><i class="fa-solid fa-location-dot text-brand-gold mt-0.5 md:mt-1"></i> شارع بغداد، دمشق، سوريا</li>
+                        <li class="flex items-start gap-2 md:gap-3"><i class="fa-solid fa-phone text-brand-gold mt-0.5 md:mt-1"></i> +963 999 000 000</li>
+                        <li class="flex items-start gap-2 md:gap-3"><i class="fa-solid fa-envelope text-brand-gold mt-0.5 md:mt-1"></i> order@nakha.sy</li>
+                        <li class="flex items-start gap-2 md:gap-3"><i class="fa-regular fa-clock text-brand-gold mt-0.5 md:mt-1"></i> يومياً: 11 ص - 2 ص</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-base md:text-lg mb-3 md:mb-5 gold-text">النشرة البريدية</h4>
+                    <p class="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">اشترك ليصلك أحدث العروض والوجبات الجديدة</p>
+                    <form class="space-y-2 md:space-y-3" onsubmit="event.preventDefault(); this.reset(); alert('تم الاشتراك بنجاح! 🎉');">
+                        <input type="email" required placeholder="بريدك الإلكتروني" class="input-field w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl text-white text-xs md:text-sm" />
+                        <button class="btn-red w-full py-2.5 md:py-3 rounded-full text-xs md:text-sm">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 text-[10px] md:text-sm text-gray-400">
+                <div>© 2026 <span class="gold-text font-bold">نكهة</span>. جميع الحقوق محفوظة.</div>
+                <div class="flex gap-4 md:gap-6">
+                    <a href="#" class="hover:text-brand-gold transition">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-brand-gold transition">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="fixed bottom-6 left-6 w-11 h-11 md:w-12 md:h-12 rounded-full bg-brand-gold text-brand-black flex items-center justify-center shadow-lg opacity-0 invisible transition-all z-40 hover:scale-110 text-sm md:text-base">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="fixed top-0 left-0 h-full w-[90%] md:w-96 z-[70] glass-strong shadow-2xl transform -translate-x-full transition-transform duration-400">
+        <div class="p-4 md:p-6 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-4 md:mb-6">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bag-shopping text-brand-gold text-lg md:text-xl"></i>
+                    <h3 class="font-amiri text-lg md:text-xl font-bold gold-text">سلة الطلبات</h3>
+                </div>
+                <button id="cartClose" class="text-brand-gold text-xl md:text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="cartItems" class="flex-1 overflow-y-auto space-y-2 md:space-y-3 mb-3 md:mb-4">
+                <div class="text-center text-gray-500 py-8 md:py-12 text-sm md:text-base">
+                    <i class="fa-solid fa-cart-shopping text-3xl md:text-4xl mb-2 md:mb-3"></i>
+                    <div>السلة فارغة</div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-3 md:pt-4 space-y-2 md:space-y-3">
+                <div class="flex justify-between text-base md:text-lg">
+                    <span>الإجمالي</span>
+                    <span id="cartTotal" class="font-bold gold-text">0 ل.س</span>
+                </div>
+                <a href="#delivery" onclick="closeCart()" class="btn-red w-full py-2.5 md:py-3 rounded-full flex items-center justify-center gap-2 text-sm md:text-base">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <span>إتمام الطلب</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/963999000000" class="fixed bottom-6 right-6 w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg z-40 hover:scale-110 transition pulse-gold text-lg md:text-2xl" style="animation-name: pulse-red;">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js">
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
+        });
+
+        AOS.init({ duration: 900, once: true, offset: 80 });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('header-scrolled');
+            else header.classList.remove('header-scrolled');
+
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                btn.classList.remove('hidden', 'invisible');
+                btn.classList.add('visible');
+            } else {
+                btn.classList.add('hidden', 'invisible');
+                btn.classList.remove('visible');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const mobileMenu = document.getElementById('mobileMenu');
+        document.getElementById('menuToggle').addEventListener('click', () => mobileMenu.classList.add('open'));
+        document.getElementById('menuClose').addEventListener('click', () => mobileMenu.classList.remove('open'));
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+        // Menu tabs
+        const tabs = document.querySelectorAll('.menu-tab');
+        const menuItems = document.querySelectorAll('.menu-item');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const cat = tab.dataset.category;
+                menuItems.forEach(item => {
+                    if (cat === 'all' || item.dataset.category === cat) {
+                        item.style.display = '';
+                        item.style.animation = 'fadeIn 0.5s';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        const style = document.createElement('style');
+        style.textContent = `
+            .menu-tab { background: rgba(20,20,20,0.8); color: #999; border: 1px solid rgba(255,193,7,0.2); }
+            .menu-tab.active, .menu-tab:hover { background: linear-gradient(135deg, #FFC107, #FFA000); color: #0A0A0A; border-color: #FFC107; }
+            @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        `;
+        document.head.appendChild(style);
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = +el.dataset.target;
+                    let current = 0;
+                    const step = target / 60;
+                    const update = () => {
+                        current += step;
+                        if (current < target) {
+                            el.textContent = Math.ceil(current).toLocaleString('ar-EG');
+                            requestAnimationFrame(update);
+                        } else {
+                            el.textContent = target.toLocaleString('ar-EG') + (target === 49 ? '/5' : '+');
+                        }
+                    };
+                    update();
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // Cart functionality
+        let cart = [];
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartBtn = document.getElementById('cartBtn');
+        const cartClose = document.getElementById('cartClose');
+
+        cartBtn.addEventListener('click', () => cartSidebar.style.transform = 'translateX(0)');
+        cartClose.addEventListener('click', closeCart);
+
+        function closeCart() {
+            cartSidebar.style.transform = 'translateX(-100%)';
+        }
+
+        function addToCart(name, price) {
+            const existing = cart.find(i => i.name === name);
+            if (existing) existing.qty++;
+            else cart.push({ name, price, qty: 1 });
+            updateCart();
+
+            const notif = document.createElement('div');
+            notif.className =
+                'fixed top-20 md:top-24 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-black px-4 md:px-6 py-2.5 md:py-3 rounded-full font-bold z-50 shadow-lg text-sm md:text-base';
+            notif.innerHTML = '<i class="fa-solid fa-check ml-2"></i> تمت الإضافة للسلة';
+            document.body.appendChild(notif);
+            setTimeout(() => notif.remove(), 2000);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const count = cart.reduce((s, i) => s + i.qty, 0);
+            document.getElementById('cartCount').textContent = count;
+
+            const cartItemsEl = document.getElementById('cartItems');
+            const orderItemsEl = document.getElementById('orderItems');
+
+            if (cart.length === 0) {
+                cartItemsEl.innerHTML =
+                    '<div class="text-center text-gray-500 py-8 md:py-12 text-sm md:text-base"><i class="fa-solid fa-cart-shopping text-3xl md:text-4xl mb-2 md:mb-3"></i><div>السلة فارغة</div></div>';
+                orderItemsEl.innerHTML =
+                    '<div class="text-center text-gray-500 text-xs md:text-sm py-3 md:py-4"><i class="fa-solid fa-cart-shopping text-xl md:text-2xl mb-1 md:mb-2"></i><div>لم تضف أي عنصر بعد</div></div>';
+            } else {
+                cartItemsEl.innerHTML = cart.map((item, i) => `
+                        <div class="glass rounded-xl p-2 md:p-3 flex items-center gap-2 md:gap-3">
+                            <div class="flex-1">
+                                <div class="font-bold text-xs md:text-sm">${item.name}</div>
+                                <div class="text-[10px] md:text-xs text-gray-400">${item.qty} × ${item.price.toLocaleString('ar-EG')} ل.س</div>
+                            </div>
+                            <div class="text-brand-gold font-bold text-xs md:text-sm">${(item.qty * item.price).toLocaleString('ar-EG')} ل.س</div>
+                            <button onclick="removeFromCart(${i})" class="text-brand-red hover:scale-110 transition"><i class="fa-solid fa-trash text-xs md:text-sm"></i></button>
+                        </div>
+                    `).join('');
+
+                orderItemsEl.innerHTML = cart.map(item => `
+                        <div class="flex justify-between text-xs md:text-sm">
+                            <span class="text-gray-300">${item.name} × ${item.qty}</span>
+                            <span class="font-bold">${(item.qty * item.price).toLocaleString('ar-EG')} ل.س</span>
+                        </div>
+                    `).join('');
+            }
+
+            const subtotal = cart.reduce((s, i) => s + i.qty * i.price, 0);
+            const delivery = 5000;
+            const total = subtotal + (cart.length > 0 ? delivery : 0);
+
+            document.getElementById('cartTotal').textContent = total.toLocaleString('ar-EG') + ' ل.س';
+            document.getElementById('subtotal').textContent = subtotal.toLocaleString('ar-EG') + ' ل.س';
+            document.getElementById('total').textContent = total.toLocaleString('ar-EG') + ' ل.س';
+            document.getElementById('itemsCount').textContent = cart.reduce((s, i) => s + i.qty, 0) + ' عنصر';
+        }
+
+        // Forms
+        document.getElementById('deliveryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (cart.length === 0) {
+                alert('الرجاء إضافة عناصر للسلة أولاً!');
+                return;
+            }
+            document.getElementById('deliverySuccess').classList.remove('hidden');
+            e.target.reset();
+            cart = [];
+            updateCart();
+            setTimeout(() => document.getElementById('deliverySuccess').classList.add('hidden'), 5000);
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('contactSuccess').classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => document.getElementById('contactSuccess').classList.add('hidden'), 5000);
+        });
+    </script>
+
+</body>
+</html>
